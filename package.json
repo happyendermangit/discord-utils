@@ -6,6 +6,7 @@
   "directories": {
     "example": "examples"
   },
+  "keywords": ["discord","data","datamining","ast","acorn","acorn-walk","scraping","scrape data","experiments","strings","dispatch","dispatch events","routes","endpoints","urls"],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
