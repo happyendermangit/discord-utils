@@ -13,21 +13,14 @@
 **NodeJS is required for the utils to work**
 
 ## How to use?
-1. clone the repo:
+1. install the module:
 ```sh
-$ git clone https://github.com/happyendermangit/discord-utils.git
+$ npm install discord-datautils
 ```
 
-2. Create the packages.json
-```sh
-$ npm init -y
-```
+3. View the [examples](#examples)
 
-2. Install the modules
-```sh
-$ npm install acorn acorn-walker
-```
-3. Do whatever u want with the modules!
+4. Enjoy!
 
 ## What data it has as of now?
 ```diff
