@@ -1,10 +1,12 @@
 # Discord utils
+
+## 🚀 The best discord datamining utils scripts
+
 [![Discord](https://img.shields.io/discord/1103066670576193627?style=for-the-badge&color=%235562EA)](https://discord.gg/Q6UYNawvaF)
  ![GitHub contributors](https://img.shields.io/github/contributors/happyendermangit/discord-utils?style=for-the-badge) ![GitHub issues](https://img.shields.io/github/issues/happyendermangit/discord-utils?style=for-the-badge) [![NPM Version](https://img.shields.io/npm/v/discord-datautils?style=for-the-badge&logo=npm&color=CC3534)](https://www.npmjs.com/package/discord-datautils)
 
 
 
-## 🚀 The best discord datamining utils scripts
 
 ### Star the repo if it helped you!
 
