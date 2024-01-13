@@ -26,30 +26,32 @@ const escodegen = require('escodegen');
 
 
 
-async function findStrings(filePath) {
+async function getBuildInfo(filePath) {
     const ast = acorn.parse( await fs.readFile(filePath, 'utf-8'), { ecmaVersion: "2022" });
-    let Strings = {}
+    let BuildInfo = {}
 
     walk.simple(ast, {
         ObjectExpression(node) {
             const keys = node?.properties?.map(e => e?.key?.name);
             
             if (    
-                keys?.includes("DISCORD_DESC_SHORT") ||
-                keys?.includes("DISCORD_NAME")  ||
-                keys?.includes("CHANGE_LANGUAGE_MODAL_TITLE_SPANISH")
+                keys?.includes("buildNumber") &&
+                keys?.includes("versionHash")  
             ) {
                 const strings = node?.properties
                 for (string of strings){
-                    Strings[string.key.value ?? string.key.name] = string.value.value
+                    let key = string.key.value ?? string.key.name
+                    if (key === "buildNumber" || key === "versionHash"){
+                        BuildInfo[key] = string.value.value
+                    }
                 } 
         
 
             }
         },
     });
-    return Strings
+    return BuildInfo
 
 }
 
-module.exports = { findStrings }
+module.exports = { getBuildInfo }

@@ -39,7 +39,6 @@ async function findRoutes(filePath) {
                 keys?.includes("USER") &&
                 keys?.includes("USER_RELATIONSHIPS") 
             ) {
-                console.log(keys.length)
                 const firstArgument = node?.arguments[0].properties
                 for (route of firstArgument){
                     if (route.value.type === "Literal"){
@@ -49,7 +48,6 @@ async function findRoutes(filePath) {
                         // a try catch here, because some routes can't be scraped using eval since it uses client variables
                         try {Routes[route.key.name] = eval(`(${escodegen.generate(route.value)})(':param',':param',':param',':param',':param',':param',':param',':param',':param',':param',':param',':param',':param',':param',':param',':param',':param',':param',':param',':param',':param',':param',':param',':param',':param',':param',':param',':param',':param',':param',':param',':param',':param',':param',':param',':param',':param',':param',':param',':param',':param',':param',':param',':param',':param',':param',':param',':param',':param',':param',':param',':param',':param',':param',':param')`)}
                         catch{
-                            console.log(route.key.name)
                         }
                     }
 
